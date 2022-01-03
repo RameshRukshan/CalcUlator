@@ -54,6 +54,8 @@ namespace CalcUlator
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Display = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.lbl_operatorS = new System.Windows.Forms.Label();
+            this.lbl_tempValue = new System.Windows.Forms.Label();
             this.displayCal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +91,7 @@ namespace CalcUlator
             this.btn_7.Size = new System.Drawing.Size(62, 59);
             this.btn_7.TabIndex = 1;
             this.btn_7.Text = "7";
+            this.btn_7.Click += new System.EventHandler(this.btn_7_Click);
             // 
             // btn_8
             // 
@@ -109,6 +112,7 @@ namespace CalcUlator
             this.btn_8.Size = new System.Drawing.Size(62, 59);
             this.btn_8.TabIndex = 1;
             this.btn_8.Text = "8";
+            this.btn_8.Click += new System.EventHandler(this.btn_8_Click);
             // 
             // btn_9
             // 
@@ -129,6 +133,7 @@ namespace CalcUlator
             this.btn_9.Size = new System.Drawing.Size(62, 59);
             this.btn_9.TabIndex = 1;
             this.btn_9.Text = "9";
+            this.btn_9.Click += new System.EventHandler(this.btn_9_Click);
             // 
             // btn_4
             // 
@@ -149,6 +154,7 @@ namespace CalcUlator
             this.btn_4.Size = new System.Drawing.Size(62, 59);
             this.btn_4.TabIndex = 1;
             this.btn_4.Text = "4";
+            this.btn_4.Click += new System.EventHandler(this.btn_4_Click);
             // 
             // btn_5
             // 
@@ -169,6 +175,7 @@ namespace CalcUlator
             this.btn_5.Size = new System.Drawing.Size(62, 59);
             this.btn_5.TabIndex = 1;
             this.btn_5.Text = "5";
+            this.btn_5.Click += new System.EventHandler(this.btn_5_Click);
             // 
             // btn_6
             // 
@@ -189,6 +196,7 @@ namespace CalcUlator
             this.btn_6.Size = new System.Drawing.Size(62, 59);
             this.btn_6.TabIndex = 1;
             this.btn_6.Text = "6";
+            this.btn_6.Click += new System.EventHandler(this.btn_6_Click);
             // 
             // btn_1
             // 
@@ -209,6 +217,7 @@ namespace CalcUlator
             this.btn_1.Size = new System.Drawing.Size(62, 59);
             this.btn_1.TabIndex = 1;
             this.btn_1.Text = "1";
+            this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
             // 
             // btn_2
             // 
@@ -229,6 +238,7 @@ namespace CalcUlator
             this.btn_2.Size = new System.Drawing.Size(62, 59);
             this.btn_2.TabIndex = 1;
             this.btn_2.Text = "2";
+            this.btn_2.Click += new System.EventHandler(this.btn_2_Click);
             // 
             // btn_3
             // 
@@ -249,6 +259,7 @@ namespace CalcUlator
             this.btn_3.Size = new System.Drawing.Size(62, 59);
             this.btn_3.TabIndex = 1;
             this.btn_3.Text = "3";
+            this.btn_3.Click += new System.EventHandler(this.btn_3_Click);
             // 
             // btn_0
             // 
@@ -269,6 +280,7 @@ namespace CalcUlator
             this.btn_0.Size = new System.Drawing.Size(62, 59);
             this.btn_0.TabIndex = 1;
             this.btn_0.Text = "0";
+            this.btn_0.Click += new System.EventHandler(this.btn_0_Click);
             // 
             // btn_00
             // 
@@ -289,6 +301,7 @@ namespace CalcUlator
             this.btn_00.Size = new System.Drawing.Size(130, 59);
             this.btn_00.TabIndex = 1;
             this.btn_00.Text = "00";
+            this.btn_00.Click += new System.EventHandler(this.btn_00_Click);
             // 
             // btn_equal
             // 
@@ -329,6 +342,7 @@ namespace CalcUlator
             this.btn_add.Size = new System.Drawing.Size(64, 59);
             this.btn_add.TabIndex = 1;
             this.btn_add.Text = "+";
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_minus
             // 
@@ -349,6 +363,7 @@ namespace CalcUlator
             this.btn_minus.Size = new System.Drawing.Size(64, 59);
             this.btn_minus.TabIndex = 1;
             this.btn_minus.Text = "-";
+            this.btn_minus.Click += new System.EventHandler(this.btn_minus_Click);
             // 
             // btn_div
             // 
@@ -369,6 +384,7 @@ namespace CalcUlator
             this.btn_div.Size = new System.Drawing.Size(62, 59);
             this.btn_div.TabIndex = 1;
             this.btn_div.Text = "/";
+            this.btn_div.Click += new System.EventHandler(this.btn_div_Click);
             // 
             // btn_mul
             // 
@@ -389,6 +405,7 @@ namespace CalcUlator
             this.btn_mul.Size = new System.Drawing.Size(62, 59);
             this.btn_mul.TabIndex = 1;
             this.btn_mul.Text = "X";
+            this.btn_mul.Click += new System.EventHandler(this.btn_mul_Click);
             // 
             // btn_mod
             // 
@@ -409,6 +426,7 @@ namespace CalcUlator
             this.btn_mod.Size = new System.Drawing.Size(62, 59);
             this.btn_mod.TabIndex = 1;
             this.btn_mod.Text = "%";
+            this.btn_mod.Click += new System.EventHandler(this.btn_mod_Click);
             // 
             // btn_clear
             // 
@@ -429,11 +447,14 @@ namespace CalcUlator
             this.btn_clear.Size = new System.Drawing.Size(64, 59);
             this.btn_clear.TabIndex = 1;
             this.btn_clear.Text = "C";
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // displayCal
             // 
             this.displayCal.AutoScroll = true;
             this.displayCal.BackColor = System.Drawing.Color.Transparent;
+            this.displayCal.Controls.Add(this.lbl_operatorS);
+            this.displayCal.Controls.Add(this.lbl_tempValue);
             this.displayCal.Controls.Add(this.lbl_Display);
             this.displayCal.FillColor = System.Drawing.Color.White;
             this.displayCal.Location = new System.Drawing.Point(12, 43);
@@ -448,15 +469,15 @@ namespace CalcUlator
             this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(16, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 17);
+            this.label1.Size = new System.Drawing.Size(95, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "CalCulator V1.0";
+            this.label1.Text = "CalcUlator V1.0";
             // 
             // lbl_Display
             // 
             this.lbl_Display.AutoSize = true;
             this.lbl_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Display.Location = new System.Drawing.Point(19, 28);
+            this.lbl_Display.Location = new System.Drawing.Point(19, 33);
             this.lbl_Display.Name = "lbl_Display";
             this.lbl_Display.Size = new System.Drawing.Size(63, 31);
             this.lbl_Display.TabIndex = 0;
@@ -465,6 +486,27 @@ namespace CalcUlator
             // guna2DragControl1
             // 
             this.guna2DragControl1.TargetControl = this;
+            // 
+            // lbl_operatorS
+            // 
+            this.lbl_operatorS.AutoSize = true;
+            this.lbl_operatorS.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_operatorS.Location = new System.Drawing.Point(269, 33);
+            this.lbl_operatorS.Name = "lbl_operatorS";
+            this.lbl_operatorS.Size = new System.Drawing.Size(31, 31);
+            this.lbl_operatorS.TabIndex = 0;
+            this.lbl_operatorS.Text = "+";
+            this.lbl_operatorS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_tempValue
+            // 
+            this.lbl_tempValue.AutoSize = true;
+            this.lbl_tempValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tempValue.Location = new System.Drawing.Point(28, 9);
+            this.lbl_tempValue.Name = "lbl_tempValue";
+            this.lbl_tempValue.Size = new System.Drawing.Size(26, 15);
+            this.lbl_tempValue.TabIndex = 0;
+            this.lbl_tempValue.Text = "N/A";
             // 
             // CalcUlator
             // 
@@ -530,6 +572,8 @@ namespace CalcUlator
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_Display;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private System.Windows.Forms.Label lbl_operatorS;
+        private System.Windows.Forms.Label lbl_tempValue;
     }
 }
 
