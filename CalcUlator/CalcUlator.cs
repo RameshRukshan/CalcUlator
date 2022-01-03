@@ -162,6 +162,17 @@ namespace CalcUlator
             Opr = "min";
         }
 
+        private void btn_equal_Click(object sender, EventArgs e)
+        {
+            operations eq = new operations();
+            eq.getValues(tmp, number, Opr);
+            eq.calculateVal();
+            number = eq.returnAns();
+            displayS();
+            lbl_operatorS.Visible = false;
+            lbl_tempValue.Visible = false;
+        }
+
         private void btn_add_Click(object sender, EventArgs e)
         {
             displaySNumT();

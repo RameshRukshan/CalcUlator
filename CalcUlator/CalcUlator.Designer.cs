@@ -51,11 +51,11 @@ namespace CalcUlator
             this.btn_mod = new Guna.UI2.WinForms.Guna2TileButton();
             this.btn_clear = new Guna.UI2.WinForms.Guna2TileButton();
             this.displayCal = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_Display = new System.Windows.Forms.Label();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.lbl_operatorS = new System.Windows.Forms.Label();
             this.lbl_tempValue = new System.Windows.Forms.Label();
+            this.lbl_Display = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.displayCal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -322,6 +322,7 @@ namespace CalcUlator
             this.btn_equal.Size = new System.Drawing.Size(64, 124);
             this.btn_equal.TabIndex = 1;
             this.btn_equal.Text = "=";
+            this.btn_equal.Click += new System.EventHandler(this.btn_equal_Click);
             // 
             // btn_add
             // 
@@ -463,30 +464,6 @@ namespace CalcUlator
             this.displayCal.Size = new System.Drawing.Size(315, 98);
             this.displayCal.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "CalcUlator V1.0";
-            // 
-            // lbl_Display
-            // 
-            this.lbl_Display.AutoSize = true;
-            this.lbl_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Display.Location = new System.Drawing.Point(19, 33);
-            this.lbl_Display.Name = "lbl_Display";
-            this.lbl_Display.Size = new System.Drawing.Size(63, 31);
-            this.lbl_Display.TabIndex = 0;
-            this.lbl_Display.Text = "N/A";
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.TargetControl = this;
-            // 
             // lbl_operatorS
             // 
             this.lbl_operatorS.AutoSize = true;
@@ -507,6 +484,30 @@ namespace CalcUlator
             this.lbl_tempValue.Size = new System.Drawing.Size(26, 15);
             this.lbl_tempValue.TabIndex = 0;
             this.lbl_tempValue.Text = "N/A";
+            // 
+            // lbl_Display
+            // 
+            this.lbl_Display.AutoSize = true;
+            this.lbl_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Display.Location = new System.Drawing.Point(19, 33);
+            this.lbl_Display.Name = "lbl_Display";
+            this.lbl_Display.Size = new System.Drawing.Size(63, 31);
+            this.lbl_Display.TabIndex = 0;
+            this.lbl_Display.Text = "N/A";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "CalcUlator V1.0";
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this;
             // 
             // CalcUlator
             // 
