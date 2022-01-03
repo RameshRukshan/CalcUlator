@@ -455,10 +455,10 @@ namespace CalcUlator
             // lbl_Display
             // 
             this.lbl_Display.AutoSize = true;
-            this.lbl_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Display.Location = new System.Drawing.Point(14, 16);
+            this.lbl_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Display.Location = new System.Drawing.Point(19, 28);
             this.lbl_Display.Name = "lbl_Display";
-            this.lbl_Display.Size = new System.Drawing.Size(38, 20);
+            this.lbl_Display.Size = new System.Drawing.Size(63, 31);
             this.lbl_Display.TabIndex = 0;
             this.lbl_Display.Text = "N/A";
             // 
@@ -494,6 +494,7 @@ namespace CalcUlator
             this.Controls.Add(this.calClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1366, 728);
             this.Name = "CalcUlator";
             this.Text = "CalcUlator";
             this.Load += new System.EventHandler(this.CalcUlator_Load);

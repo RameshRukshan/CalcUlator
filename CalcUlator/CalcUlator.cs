@@ -17,9 +17,11 @@ namespace CalcUlator
             InitializeComponent();
         }
 
+        public double number = 0;
+
         private void CalcUlator_Load(object sender, EventArgs e)
         {
-
+            lbl_Display.Text = number.ToString();
         }
     }
 }
