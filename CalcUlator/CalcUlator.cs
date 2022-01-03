@@ -32,10 +32,15 @@ namespace CalcUlator
                 tmp = number;
                 number = 0;
             }
+            else if (number == 0 && tmp > 0)
+            {
+
+            }
             else
             {
-                tmp = 0;
+
             }
+
             lbl_tempValue.Visible = true;
             lbl_tempValue.Text = tmp.ToString();
             displayS();
