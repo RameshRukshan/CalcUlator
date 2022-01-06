@@ -160,6 +160,7 @@ namespace CalcUlator
             lbl_operatorS.Text = "-";
             lbl_operatorS.Visible = true;
             Opr = "min";
+            
         }
 
         private void btn_equal_Click(object sender, EventArgs e)
